@@ -15,6 +15,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="http://kskpage.com/favicon1.ico">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
   </head>
@@ -31,7 +32,7 @@
         </div>
       </header>
 
-      <main role="main" class="inner cover">
+      <div role="main" class="inner cover">
 
         <h1 class="cover-heading">Number guessing game</h1>
 
@@ -51,7 +52,77 @@
           <p class="lowOrHi"></p>
         </div>
 
-      </main>
+
+        <script>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    const guesses = document.querySelector('.guesses');
+    const lastResult = document.querySelector('.lastResult');
+    const lowOrHi = document.querySelector('.lowOrHi');
+    const guessSubmit = document.querySelector('.guessSubmit');
+    const guessField = document.querySelector('.guessField');
+    let guessCount = 1;
+    let resetButton;
+
+    function checkGuess() {
+      let userGuess = Number(guessField.value);
+      if (guessCount === 1) {
+        guesses.textContent = 'Previous guesses: ';
+      }
+
+      guesses.textContent += userGuess + ' ';
+
+      if (userGuess === randomNumber) {
+        lastResult.textContent = 'Congratulations! You got it right!';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else if (guessCount === 10) {
+        lastResult.textContent = '!!!GAME OVER!!!';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else {
+        lastResult.textContent = 'Wrong!';
+        lastResult.style.backgroundColor = 'red';
+        if(userGuess < randomNumber) {
+          lowOrHi.textContent = 'Last guess was too low!' ;
+        } else if(userGuess > randomNumber) {
+          lowOrHi.textContent = 'Last guess was too high!';
+        }
+      }
+
+      guessCount++;
+      guessField.value = '';
+    }
+
+    guessSubmit.addEventListener('click', checkGuess);
+
+    function setGameOver() {
+      guessField.disabled = true;
+      guessSubmit.disabled = true;
+      resetButton = document.createElement('button');
+      resetButton.textContent = 'Start new game';
+      document.body.append(resetButton);
+      resetButton.addEventListener('click', resetGame);
+    }
+
+    function resetGame() {
+      guessCount = 1;
+      const resetParas = document.querySelectorAll('.resultParas p');
+      for(let i = 0 ; i < resetParas.length ; i++) {
+        resetParas[i].textContent = '';
+      }
+
+      resetButton.parentNode.removeChild(resetButton);
+      guessField.disabled = false;
+      guessSubmit.disabled = false;
+      guessField.value = '';
+      guessField.focus();
+      lastResult.style.backgroundColor = 'white';
+      randomNumber = Math.floor(Math.random() * 100) + 1;
+    }
+</script>
+
+</div>
 
       <footer class="mastfoot mt-auto">
         <div class="inner">
