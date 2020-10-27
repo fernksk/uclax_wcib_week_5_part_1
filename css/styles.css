@@ -1,6 +1,6 @@
 /*
- * Globals
- */
+* Globals
+*/
 /* Links */
 a,
 a:focus,
@@ -18,8 +18,8 @@ a:hover {
   border: .05rem solid #fff; }
 
 /*
- * Base structure
- */
+* Base structure
+*/
 html,
 body {
   font-family: 'Petrona', serif;
@@ -54,11 +54,11 @@ button {
   text-rendering: auto;
   color: #fff;
   background-color: #fff;
-  background-image: url("../images/bmo.gif");
-  background-size: 200px;
+  background-image: url("../images/stn.gif");
+  background-size: 250px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: bottom;
-  border-color: #fff;
+  border-color: #000;
   border-width: 2px;
   font-size: 30px; }
 
@@ -66,8 +66,8 @@ button {
   max-width: 42em; }
 
 /*
- * Header
- */
+* Header
+*/
 .masthead {
   margin-bottom: 2rem; }
 
@@ -99,8 +99,8 @@ button {
     float: right; } }
 
 /*
- * Cover
- */
+* Cover
+*/
 .cover {
   padding: 0 1.5rem; }
 
@@ -109,7 +109,7 @@ button {
   font-weight: 700; }
 
 /*
- * Footer
- */
+* Footer
+*/
 .mastfoot {
   color: rgba(255, 255, 255, 0.5); }

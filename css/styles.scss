@@ -1,6 +1,6 @@
 /*
- * Globals
- */
+* Globals
+*/
 
 /* Links */
 a,
@@ -21,8 +21,8 @@ a:hover {
 
 
 /*
- * Base structure
- */
+* Base structure
+*/
 
 html,
 body {
@@ -46,31 +46,31 @@ p {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #000;
-    border-width: 2px;
-    border-color: #16e7ec;
-  }
+  color: #fff;
+  background-color: #000;
+  border-width: 2px;
+  border-color: #16e7ec;
+}
 
 .btn-primary:hover {
   color: #000;
   background-color: #16e7ec;
   border-width: 2px;
   border-color: #16e7ec;
-  }
+}
 
-  button {
-      text-rendering: auto;
-      color: #fff;
-      background-color:#fff;
-      background-image:url('../images/bmo.gif');
-      background-size: 200px;
-      background-repeat:no-repeat;
-      background-position: bottom;
-      border-color: #fff;
-      border-width: 2px;
-      font-size: 30px;
-    }
+button {
+  text-rendering: auto;
+  color: #fff;
+  background-color:#fff;
+  background-image:url('../images/stn.gif');
+  background-size: 250px;
+  background-position: center;
+  background-repeat:no-repeat;
+  border-color: #000;
+  border-width: 2px;
+  font-size: 30px;
+}
 
 .cover-container {
   max-width: 42em;
@@ -78,8 +78,8 @@ p {
 
 
 /*
- * Header
- */
+* Header
+*/
 .masthead {
   margin-bottom: 2rem;
 }
@@ -121,8 +121,8 @@ p {
 
 
 /*
- * Cover
- */
+* Cover
+*/
 .cover {
   padding: 0 1.5rem;
 }
@@ -133,8 +133,8 @@ p {
 
 
 /*
- * Footer
- */
+* Footer
+*/
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
